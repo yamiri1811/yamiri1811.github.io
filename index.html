@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter For Yamiri❤️</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffe0ec, #fff7d6);
+        overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        width: 380px;
+        height: 260px;
+        perspective: 1200px;
+      }
+
+      .envelope {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      /* Badan Amplop */
+      .base {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ffb6c1;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      /* Segitiga atas */
+      .base::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 50% 55%, 100% 0);
+        background: #ff8fab;
+        z-index: 2;
+      }
+
+      /* Segitiga bawah */
+      .base::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 100%, 50% 45%, 100% 100%);
+        background: #ff9db5;
+        z-index: 2;
+      }
+
+      /* Tutup Amplop */
+      .flap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ff7aa2;
+        clip-path: polygon(0 0, 50% 55%, 100% 0);
+        transform-origin: top;
+        transition: 1s ease;
+        z-index: 5;
+      }
+
+      .open .flap {
+        transform: rotateX(180deg);
+      }
+
+      /* Tulisan depan */
+      .front-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 110px;
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+        z-index: 6;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+      }
+
+      .open .front-text {
+        opacity: 0;
+      }
+
+      /* Tombol buka */
+      .seal {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: white;
+        border-radius: 50%;
+        left: 50%;
+        top: 145px;
+        transform: translateX(-50%);
+        z-index: 7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+
+      .seal:hover {
+        transform: translateX(-50%) scale(1.08);
+      }
+
+      /* Surat */
+      .letter {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 30%);
+        width: 90%;
+        height: 88%;
+        background: white;
+        border-radius: 14px;
+        padding: 24px;
+        overflow: auto;
+        opacity: 0;
+        transition: 1s ease;
+        z-index: 2;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .open .letter {
+        transform: translate(-50%, -38%);
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+
+      .letter h2 {
+        text-align: center;
+        margin-bottom: 18px;
+        color: #ff5c8a;
+      }
+
+      .letter p {
+        color: #444;
+        line-height: 1.8;
+        font-size: 15px;
+      }
+
+      .hint {
+        position: absolute;
+        bottom: -45px;
+        width: 100%;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+
+        <div class="base"></div>
+
+        <!-- Tulisan depan amplop -->
+        <div class="front-text">To Yamiri ❤️</div>
+
+        <!-- Tombol buka -->
+        <div class="seal">💌</div>
+
+        <!-- Isi surat -->
+        <div class="letter">
+          <h2>For Yamiri ✨</h2>
+
+          <p>
+            Hai Yamiri, Annyeong 👋
+            <br /><br />
+
+            Bo terasa miacai ai poi au ho, super excited bo? Pastinya uw kan, wa
+            ai ucapin Selamat ya miacai ai khi Malay au, Yamiri naik level kelas
+            kehidupan au ho, wa MinApp ho Yamiri 👏👏👏. Tan ce poi ki e si, mai
+            kia yaaa, waktu ai take off e si, bersandar ya dan gim ie pegangan
+            yaa, terus kalau khi luar angkasa au wkwk (i mean khi ketinggian
+            au), maybe kam bon bon aja lo ho supaya hi ya bo thia lo ho 😁
+            <br />
+            <br />
+
+            Nah wa khi kolai akan selalu doa u sunsun khi dan sunsun tui ya 🙏,
+            semoga u e trip khi Malay itu lancar dan u e enjoy kaliau moment
+            dengan tenang dan hua hua hi hi, dan mai khi sio kang ya, fokus 100%
+            kia-kia seng aja ho 😁
+            <br />
+            <br />
+
+            Untuk kin me, semoga u e ho khun, mai sia sua sio ya dan mimpi
+            indah, dan che khi lai tepat waktu dengan semangat dan kondisi yang
+            prima yaa ☀️🤍. Che khi lai au mai pek chek yaaa... mai beki gia
+            yang te it iaukin e, paspor kak ktp lo ho, dan gia iok juga yaa
+            untuk jaga-jaga aja karena wa yakin u pasti cinia prima e, dan wa
+            doain terus 🙏. Kalau balek au tan, wa gien thia u e experience khi
+            sana ancua deh, kui song, kui berkesan, kui seru, jadi kalau u
+            berkenan kan, tan share ho wa ur experience ya haha 😂🤣
+            <br />
+            <br />
+
+            From: Your always-supportive, Jacky Oppa 😎
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const envelope = document.getElementById("envelope");
+
+      envelope.addEventListener("click", () => {
+        envelope.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
