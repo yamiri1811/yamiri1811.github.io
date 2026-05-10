@@ -228,6 +228,9 @@
   </head>
 
   <body>
+    <!-- Audio -->
+    <audio id="bgMusic" src="./its-you.mp3"></audio>
+
     <div class="container">
       <div class="envelope" id="envelope">
         <div class="flap"></div>
@@ -264,14 +267,15 @@
 
             <br /><br />
 
-            Untuk kin me, semoga u e ho khun, mai si sua sio ya dan mimpi indah,
-            dan che khi lai tepat waktu dengan semangat dan kondisi yang prima
-            yaa ☀️🤍 Che khi lai au mai pek chek yaaa... mai beki gia yang te it
-            iaukin e, paspor kak ktp lo ho, dan gia iok juga yaa untuk jaga-jaga
-            aja karena wa yakin u pasti cinia prima e, dan wa doain terus 🙏
-            Kalau balek au tan, wa gien thia u e experience khi sana ancua deh,
-            kui song, kui berkesan, kui seru, jadi kalau u berkenan kan, tan
-            share ho wa ur experience ya haha 😂🤣
+            Untuk kin me, semoga u e ho khun, mai si sua sio ya dan mimpi yg
+            indah ya, dan che khi lai tepat waktu dengan semangat dan kondisi
+            yang prima yaa ☀️💪 Che khi lai au mai pek chek yaaa... mai beki gia
+            yang te it iaukin e, paspor kak ktp lo ho, dan gia iok juga yaa
+            untuk jaga-jaga aja karena wa yakin u pasti cinia prima e, dan wa
+            doain terus 🙏 Nah tan kalau balek au kan, wa gien thia u e
+            experience khi sana ancua deh wkwk, kui song, kui berkesan, kui
+            seru, jadi kalau u berkenan kan, tan share ho wa ur experience ya
+            haha 😂🤣
           </p>
 
           <!-- Signature -->
@@ -288,9 +292,21 @@
 
     <script>
       const envelope = document.getElementById("envelope");
+      const bgMusic = document.getElementById("bgMusic");
+
+      // volume musik
+      bgMusic.volume = 0.3;
+
+      let opened = false;
 
       envelope.addEventListener("click", () => {
         envelope.classList.toggle("open");
+
+        // play music hanya pertama kali
+        if (!opened) {
+          bgMusic.play();
+          opened = true;
+        }
       });
     </script>
   </body>
