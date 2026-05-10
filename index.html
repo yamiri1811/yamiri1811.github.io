@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Letter For Yamiri❤️</title>
+    <title>Letter For Yamiri ❤️</title>
 
     <style>
       @font-face {
@@ -12,11 +12,16 @@
         font-weight: 400;
       }
 
-      /* @font-face {
-        font-family: "Poppins";
+      @font-face {
+        font-family: "Poppins-bold";
         src: url("./fonts/Poppins-Bold.ttf") format("truetype");
-        font-weight: 700;
-      } */
+      }
+
+      @font-face {
+        font-family: "Poppins-semibold";
+        src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -119,7 +124,7 @@
         opacity: 0;
       }
 
-      /* Tombol buka */
+      /* Tombol Seal */
       .seal {
         position: absolute;
         width: 70px;
@@ -135,11 +140,18 @@
         justify-content: center;
         font-size: 28px;
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
+        transition: 0.6s ease;
       }
 
       .seal:hover {
         transform: translateX(-50%) scale(1.08);
+      }
+
+      /* Saat dibuka */
+      .open .seal {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-120px) scale(0.7);
+        pointer-events: none;
       }
 
       /* Surat */
@@ -178,13 +190,39 @@
         font-size: 15px;
       }
 
-      .hint {
-        position: absolute;
-        bottom: -45px;
-        width: 100%;
-        text-align: center;
-        color: #666;
-        font-size: 14px;
+      .signature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .signature img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffd1dc;
+      }
+
+      /* Scroll cantik */
+      .letter::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .letter::-webkit-scrollbar-thumb {
+        background: #ffb6c1;
+        border-radius: 10px;
+      }
+
+      .italic {
+        font-style: italic;
+        font-family: "Poppins-bold", sans-serif;
+      }
+
+      .italic-semi {
+        font-style: italic;
+        font-family: "Poppins-semibold", sans-serif;
       }
     </style>
   </head>
@@ -196,18 +234,18 @@
 
         <div class="base"></div>
 
-        <!-- Tulisan depan amplop -->
-        <div class="front-text">To Yamiri ❤️</div>
+        <!-- Tulisan depan -->
+        <div class="front-text italic">To Yamiri ❤️</div>
 
-        <!-- Tombol buka -->
+        <!-- Seal -->
         <div class="seal">💌</div>
 
         <!-- Isi surat -->
         <div class="letter">
-          <h2>For Yamiri ✨</h2>
+          <h2 class="italic">For Yamiri ✨</h2>
 
-          <p>
-            Hai Yamiri, Annyeong 👋
+          <p class="italic-semi">
+            Hi Yamiri, Annyeong.... 👋👋
             <br /><br />
 
             Bo terasa miacai ai poi au ho, super excited bo? Pastinya uw kan, wa
@@ -216,29 +254,34 @@
             kia yaaa, waktu ai take off e si, bersandar ya dan gim ie pegangan
             yaa, terus kalau khi luar angkasa au wkwk (i mean khi ketinggian
             au), maybe kam bon bon aja lo ho supaya hi ya bo thia lo ho 😁
-            <br />
-            <br />
+
+            <br /><br />
 
             Nah wa khi kolai akan selalu doa u sunsun khi dan sunsun tui ya 🙏,
             semoga u e trip khi Malay itu lancar dan u e enjoy kaliau moment
             dengan tenang dan hua hua hi hi, dan mai khi sio kang ya, fokus 100%
             kia-kia seng aja ho 😁
-            <br />
-            <br />
 
-            Untuk kin me, semoga u e ho khun, mai sia sua sio ya dan mimpi
-            indah, dan che khi lai tepat waktu dengan semangat dan kondisi yang
-            prima yaa ☀️🤍. Che khi lai au mai pek chek yaaa... mai beki gia
-            yang te it iaukin e, paspor kak ktp lo ho, dan gia iok juga yaa
-            untuk jaga-jaga aja karena wa yakin u pasti cinia prima e, dan wa
-            doain terus 🙏. Kalau balek au tan, wa gien thia u e experience khi
-            sana ancua deh, kui song, kui berkesan, kui seru, jadi kalau u
-            berkenan kan, tan share ho wa ur experience ya haha 😂🤣
-            <br />
-            <br />
+            <br /><br />
 
-            From: Your always-supportive, Jacky Oppa 😎
+            Untuk kin me, semoga u e ho khun, mai si sua sio ya dan mimpi indah,
+            dan che khi lai tepat waktu dengan semangat dan kondisi yang prima
+            yaa ☀️🤍 Che khi lai au mai pek chek yaaa... mai beki gia yang te it
+            iaukin e, paspor kak ktp lo ho, dan gia iok juga yaa untuk jaga-jaga
+            aja karena wa yakin u pasti cinia prima e, dan wa doain terus 🙏
+            Kalau balek au tan, wa gien thia u e experience khi sana ancua deh,
+            kui song, kui berkesan, kui seru, jadi kalau u berkenan kan, tan
+            share ho wa ur experience ya haha 😂🤣
           </p>
+
+          <!-- Signature -->
+          <div class="signature">
+            <span class="italic">
+              From: Your always-supportive, Jacky Oppa 😎
+            </span>
+
+            <img src="./milo.jpg" alt="Milo" />
+          </div>
         </div>
       </div>
     </div>
